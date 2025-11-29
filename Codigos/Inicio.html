@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesion</title>
+    <link rel="stylesheet" href="Inicio.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="informacion">
+            <p class="texto1">Bienvenido a DeltaStore</p>
+            <p class="descripcion">DeltaStore es tu tienda de confianza de Gaming, puedes encontrar juegos en formato digital y fisico a
+                precios bastante buenos, pero no solo nos limitamos a la venta de juegos si no tambien a la venta de
+                hardware para que puedas disfrutar de la mejor manera posible.
+            </p>
+            <hr>
+            <h2 class="Indicador">Inicia sesión para ingresar</h2>
+        </div>
+            <form class="Formulario" action="Interfaz.html" method="get">
+            <h2 class="Indicador">Accede a tu cuenta</h2>
+            <p class="aviso">
+                Para que pueda disfrutar plenamente de nustros servicios debe iniciar sesion con su cuenta de DeltaStore, si
+                no cuenta con una cuenta de DeltaStore, no espere para hacer una, ser parte de nuestra comunidad le traera
+                grandes beneficios en el mundo del Gaming, recibira notificaciones de nustros productos mas recientes y
+                lanzamientos de juegos del momento.
+            </p>
+            <div class="datos">
+                <label for="Correo">Correo de administrador: </label>
+                <input type="email" class="dato" placeholder="Ingrese Correo" name="Correo" required>
+                <br>
+                <label for="Contraseña">Ingrese su contraseña:</label>
+                <input type="password" class="dato" placeholder="Ingresa una contraseña" name="Contraseña" required>
+                <br>
+                <label for="Confirmación">Confirme su contraseña:</label>
+                <input type="password" class="dato" placeholder="Ingresa una contraseña" name="Confirmación" required>
+                <br>
+                <button type="submit" class="enviar">Iniciar sesión</button>
+                <br>
+                <a href="#">¿Olvidó su contraseña?</a>
+            </div>
+        </form>
+    </div>
+    <script src="Inicio.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+</html>
