@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-image: url(/Imagenes/FondoContacto.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+.container-contacto {
+    background: linear-gradient(to top, #001f3f 0%, #00f0ff 50%, #0a0a0a 100%);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    width: 100%;
+    max-width: 500px;
+}
+.container-contacto h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 0 0 5px #00f0ff;
+}
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: white;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #00f0ff;
+    background-color: #111;
+    color: white;
+    font-size: 14px;
+}
+input:focus, textarea:focus {
+    outline: none;
+    border: 1px solid #00aacc;
+    box-shadow: 0 0 5px #00f0ff;
+}
+.acciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.volver {
+    background-color: #111;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.volver:hover {
+    background-color: #00f0ff;
+    color: #000;
+}
+.enviar {
+    background-color: #00f0ff;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.enviar:hover {
+    background-color: #00aacc;
+}
+@media (max-width: 768px) {
+    .acciones {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .volver, .enviar {
+        width: 100%;
+        text-align: center;
+    }
+}

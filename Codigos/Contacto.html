@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto - DeltaStore</title>
+    <link rel="stylesheet" href="Contacto.css">
+</head>
+<body>
+    <div class="container-contacto">
+        <h2>Contáctanos</h2>
+        <form id="formContacto">
+            <label for="correoUsuario">Tu correo:</label>
+            <input type="email" id="correoUsuario" name="correoUsuario" placeholder="Ingresa tu correo" required>
+            <label for="correoTienda">Correo de la tienda:</label>
+            <input type="email" id="correoTienda" name="correoTienda" value="contacto@deltastore.com" readonly>
+            <label for="mensaje">Comentario o queja:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="En este campo usted puede escribir su comentario o reclamo referente alguna compra, sugerencia o percance en el uso de nuestra página..." required></textarea>
+            <div class="acciones">
+                <a href="Interfaz.html" class="volver">← Volver al inicio</a>
+                <button type="submit" class="enviar">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <script src="Contacto.js"></script>
+</body>
+</html>
