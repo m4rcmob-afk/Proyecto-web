@@ -1,11 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interfaz</title>
+    <title>DeltaStore-Tienda</title>
+    <link rel="stylesheet" href="Interfaz.css">
 </head>
+
 <body>
-    
+    <header class="encabezado">
+        <div class="logo">
+            <img src="/Imagenes/LogoTienda.png" alt="Logo Delta Store">
+        </div>
+        <h1 class="titulo">Página de Inicio</h1>
+        <div class="acciones">
+            <a href="Inicio.html" class="boton-login">Iniciar sesión</a>
+            <button class="boton-menu" id="abrirMenu">☰</button>
+        </div>
+    </header>
+    <aside class="menu-lateral" id="menuLateral">
+        <nav>
+            <ul>
+                <li><a href="Interfaz.html">Página principal</a></li>
+                <li><a href="#consolas">Consolas</a></li>
+                <li><a href="#eqipos">Equipos gamer</a></li>
+                <li><a href="#accesorios">Accesorios</a></li>
+                <li><a href="#juegos">Juegos</a></li>
+                <li><a href="#noticias">Noticias</a></li>
+                <li><a href="#">Agregar productos</a></li>
+                <li><a href="#">Carrito</a></li>
+                <li><a href="#">Historial de compras</a></li>
+                <li><a href="#">Contactanos</a></li>
+                <li><a href="#">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <div class="buscador">
+            <input type="text" placeholder="Buscar productos..." id="barraBusqueda">
+            <button id="btnBuscar">🔍</button>
+        </div>
+        <div class="secciones">
+            <section id="consolas" class="productos">
+                <h2>Consolas</h2>
+                <div class="producto">
+                    <img src="Imagenes/consola1.jpg" alt="Consola 1">
+                    <h3>PlayStation 5</h3>
+                    <p>$499</p>
+                    <p class="descripcion">
+                        Consola de última generación con procesador AMD Ryzen, gráficos RDNA 2, SSD ultrarrápido de 825
+                        GB,
+                        soporte para juegos en 4K hasta 120 FPS y retrocompatibilidad con títulos de PS4. Incluye mando
+                        DualSense con retroalimentación háptica.
+                    </p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="Imagenes/consola2.jpg" alt="Consola 2">
+                    <h3>Xbox Series X</h3>
+                    <p>$499</p>
+                    <p class="descripcion">
+                        Potente consola con CPU Zen 2 y GPU RDNA 2, almacenamiento SSD de 1 TB, soporte para juegos en
+                        4K nativo,
+                        ray tracing y hasta 120 FPS. Compatible con miles de juegos de Xbox One y Xbox 360.
+                    </p>
+                    <button>Agregar al carrito</button>
+                </div>
+            </section>
+            <section id="equipos" class="productos">
+                <h2>Equipos Gamer</h2>
+                <div class="producto">
+                    <img src="Imagenes/equipo1.jpg" alt="Equipo Gamer 1">
+                    <h3>PC Gamer Alpha</h3>
+                    <p>$1200</p>
+                    <p class="descripcion">
+                        Torre gamer con procesador Intel Core i7 de 12ª generación, tarjeta gráfica NVIDIA RTX 4070,
+                        16 GB de RAM DDR5 y SSD NVMe de 1 TB. Ideal para gaming competitivo y streaming en alta calidad.
+                    </p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="Imagenes/equipo2.jpg" alt="Equipo Gamer 2">
+                    <h3>Laptop Gamer Nitro</h3>
+                    <p>$999</p>
+                    <p class="descripcion">
+                        Portátil gamer con pantalla Full HD de 15.6” a 144 Hz, procesador AMD Ryzen 7, GPU NVIDIA RTX
+                        3060,
+                        16 GB de RAM y SSD de 512 GB. Perfecta para jugar en cualquier lugar con alto rendimiento.
+                    </p>
+                    <button>Agregar al carrito</button>
+                </div>
+            </section>
+            <section id="accesorios" class="productos">
+                <h2>Accesorios</h2>
+                <div class="producto">
+                    <img src="Imagenes/accesorio1.jpg" alt="Accesorio 1">
+                    <h3>Teclado Mecánico RGB</h3>
+                    <p>$80</p>
+                    <p class="descripcion">
+                        Teclado mecánico con switches rojos de respuesta rápida, retroiluminación RGB personalizable,
+                        construcción en aluminio y anti-ghosting completo. Diseñado para largas sesiones de juego.
+                    </p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="Imagenes/accesorio2.jpg" alt="Accesorio 2">
+                    <h3>Mouse Gamer</h3>
+                    <p>$40</p>
+                    <p class="descripcion">
+                        Mouse ergonómico con sensor óptico de 16,000 DPI, 6 botones programables, retroiluminación RGB
+                        y memoria interna para perfiles personalizados. Precisión y velocidad para eSports.
+                    </p>
+                    <button>Agregar al carrito</button>
+                </div>
+            </section>
+            <section id="juegos" class="productos">
+                <h2>Juegos</h2>
+                <div class="producto">
+                    <img src="Imagenes/juego1.jpg" alt="Juego 1">
+                    <h3>Cyberpunk 2077</h3>
+                    <p>$59</p>
+                    <p class="descripcion">
+                        RPG de mundo abierto ambientado en Night City. Ofrece gráficos de última generación,
+                        personalización completa de personajes, narrativa profunda y soporte para ray tracing.
+                    </p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="Imagenes/juego2.jpg" alt="Juego 2">
+                    <h3>Elden Ring</h3>
+                    <p>$69</p>
+                    <p class="descripcion">
+                        Juego de acción y aventura desarrollado por FromSoftware. Mundo abierto con exploración libre,
+                        combates desafiantes, jefes épicos y colaboración con George R. R. Martin en la historia.
+                    </p>
+                    <button>Agregar al carrito</button>
+                </div>
+            </section>
+            <section id="noticias" class="productos">
+                <h2>Noticias</h2>
+                <div class="producto">
+                    <img src="Imagenes/noticia1.jpg" alt="Noticia 1">
+                    <h3>Nueva GPU RTX 5090</h3>
+                    <p>Última novedad gamer</p>
+                    <p class="descripcion">
+                        NVIDIA presenta su nueva tarjeta gráfica RTX 5090 con arquitectura Ada Lovelace,
+                        soporte para ray tracing avanzado, DLSS 4.0 y rendimiento superior para gaming en 8K.
+                    </p>
+                    <button>Leer más</button>
+                </div>
+                <div class="producto">
+                    <img src="Imagenes/noticia2.jpg" alt="Noticia 2">
+                    <h3>Lanzamiento GTA VI</h3>
+                    <p>Disponible en 2025</p>
+                    <p class="descripcion">
+                        Rockstar Games anuncia GTA VI con un mapa más grande que nunca, gráficos hiperrealistas,
+                        multijugador expandido y nuevas mecánicas de juego. Lanzamiento previsto para consolas y PC.
+                    </p>
+                    <button>Leer más</button>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 DeltaStore - Tu tienda gamer</p>
+    </footer>
+    <script src="Interfaz.js"></script>
 </body>
 </html>

@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: #0a0a0a;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    padding: 20px;
+}
+.informacion {
+    flex: 1;
+    padding: 20px;
+    background-image: url(/Imagenes/LogoInicio.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.texto1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00f0ff;
+}
+.descripcion {
+    margin: 15px 0;
+    line-height: 1.5;
+}
+.Indicador {
+    color: #00f0ff;
+    margin-top: 20px;
+}
+.Formulario {
+    flex: 1;
+    background-color: #111;
+    border: 1px solid #00f0ff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+.aviso {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.datos label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #00f0ff;
+}
+.dato {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #222;
+    color: white;
+}
+.dato:focus {
+    border: 1px solid #00f0ff;
+    box-shadow: 0 0 5px #00f0ff;
+}
+.enviar {
+    width: 100%;
+    background-color: #00f0ff;
+    color: #000;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+.enviar:hover {
+    background-color: #00aacc;
+}
+.acciones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.acciones a {
+    color: #00f0ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.acciones a:hover {
+    color: #fff;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .Formulario {
+        margin-top: 20px;
+    }
+}

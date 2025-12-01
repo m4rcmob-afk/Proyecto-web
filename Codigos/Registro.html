@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de cuenta</title>
+    <link rel="stylesheet" href="Registro.css">
+</head>
+<body>
+    <div class="container">
+        <div class="informacion">
+            <p class="texto1">Únete a DeltaStore</p>
+            <p class="descripcion">
+                DeltaStore es tu tienda gamer de confianza. Al crear tu cuenta podrás acceder a descuentos exclusivos,
+                recibir notificaciones de lanzamientos y disfrutar de una experiencia personalizada en hardware y juegos.
+            </p>
+            <hr>
+            <h2 class="Indicador">Crea tu cuenta para ingresar</h2>
+        </div>
+        <form class="Formulario" action="Interfaz.html" method="get">
+            <h2 class="Indicador">Cree su cuenta y unase a la comunidad gamer</h2>
+            <p class="aviso">
+                Completa los siguientes datos para crear tu cuenta en DeltaStore. Ser parte de nuestra comunidad gamer
+                te dará acceso a beneficios únicos y promociones especiales.
+            </p>
+            <div class="datos">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" class="dato" placeholder="Ingrese su nombre" name="nombre" required>
+                <br>
+                <label for="alias">Alias:</label>
+                <input type="text" class="dato" placeholder="Ingrese su alias" name="alias">
+                <br>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" class="dato" placeholder="Ingrese su teléfono" name="telefono">
+                <br>
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" class="dato" placeholder="Ingrese su correo" name="correo" required>
+                <br>
+                <label for="password">Contraseña:</label>
+                <input type="password" class="dato" placeholder="Ingrese una contraseña" name="password" required>
+                <br>
+                <label for="confirmar">Confirmar contraseña:</label>
+                <input type="password" class="dato" placeholder="Repita la contraseña" name="confirmar" required>
+                <br>
+                <button type="submit" class="enviar">Crear cuenta</button>
+                <br>
+                <div class="acciones">
+                    <a href="Inicio.html" class="Restablecer">¿Ya tienes cuenta? Inicia sesión</a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="Registro.js"></script>
+</body>
+</html>

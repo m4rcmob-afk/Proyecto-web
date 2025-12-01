@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-body{
+body {
     background-image: url(/Imagenes/FondoInicio.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -13,81 +13,109 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
-.container{
+.container {
     display: flex;
-    height: 700px;
-    width: 1000px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    margin: auto;
-}
-.informacion{
-    padding: 150px 50px;
-    width: 50%;
-    background: linear-gradient(135deg, #b8860b 0%, #ffd700 50%, #fff5b1 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #fff;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
     border-radius: 20px;
+    overflow: hidden;
 }
-.texto1{
-    color: white;
-    font-size: 20px;
-    margin-bottom: 25px;
-    font-weight: bold;
+.informacion, .Formulario {
+    flex: 1 1 400px;
+    padding: 40px 20px;
+    color: #fff;
 }
-.descripcion{
-    color: white;
-    font-weight: bold;
-    text-shadow: 5px 5px 10px black;
-    font-size: 16px;
-    margin-bottom: 40px;
+.informacion {
+    background: linear-gradient(135deg, #001f2f 0%, #003f5c 50%, #005f7f 100%);
 }
-.Indicador{
-    color: white;
-    text-transform: uppercase;
-    font-size: 30px;
-    margin-bottom: 25px;
-}
-.aviso{
-    color: white;
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-.informacion hr{
-    width: 55px;
-    border: 4px solid white;
-    margin-left: 80px;
-    margin-bottom: 25px;
-}
-.Formulario{
-    padding: 150px 50px;
+.Formulario {
     text-align: center;
-    background: linear-gradient(135deg, #0b3d91 0%, #102f5a 50%, #0b2540 100%);
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    color: #fff;
-    border-radius: 20px;
+    background: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #001f2f 100%);
 }
-label{
-    color: white;
-    font-size: 14px;
+.texto1 {
+    font-size: clamp(18px, 2vw, 24px);
+    margin-bottom: 25px;
     font-weight: bold;
+    color: #00f0ff;
+    text-shadow: 0 0 5px #00f0ff;
 }
-.enviar{
-    background-color: orange;
+.descripcion {
+    font-size: clamp(14px, 1.5vw, 18px);
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+.Indicador {
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 5rem;
+    color: #00f0ff;
+    text-shadow: 0 0 5px #00f0ff;
+}
+.aviso {
+    font-size: clamp(12px, 1.5vw, 16px);
+    margin-bottom: 20px;
+    color: #ccc;
+}
+label {
+    font-size: clamp(12px, 1.5vw, 16px);
+    font-weight: bold;
+    color: #00f0ff;
+}
+.dato {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #00f0ff;
+    border-radius: 5px;
+    background-color: #111;
     color: white;
+}
+.dato:focus {
+    outline: none;
+    border: 1px solid #00aacc;
+    box-shadow: 0 0 8px #00f0ff;
+}
+.enviar {
+    background-color: #00f0ff;
+    color: #000;
     font-weight: bold;
     border: none;
-    padding: 10px;
+    padding: 12px;
     width: 100%;
     margin-top: 20px;
-    margin-bottom: 20px;
     cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
-.dato{
-    outline: none;
-    border-color: dodgerblue;
-    border-style: solid;
-    margin: 5px 10px;
+.enviar:hover {
+    background-color: #00aacc;
+}
+.acciones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.acciones a {
+    color: #00f0ff;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.acciones a:hover {
+    color: #fff;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .informacion, .Formulario {
+        padding: 20px;
+        text-align: center;
+    }
 }
