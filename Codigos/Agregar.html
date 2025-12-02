@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Producto - DeltaStore</title>
+    <link rel="stylesheet" href="Agregar.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container-form">
+        <h2>Agregar Producto</h2>
+        <form id="formProducto">
+            <label for="titulo">Nombre del producto:</label>
+            <input type="text" id="titulo" name="titulo" placeholder="Ejemplo: PlayStation 5" required>
+            <label for="categoria">Categoría:</label>
+            <select id="categoria" name="categoria" required>
+                <option value="">Seleccione una categoría</option>
+                <option value="consolas">Consolas</option>
+                <option value="equipos">Equipos gamer</option>
+                <option value="accesorios">Accesorios</option>
+                <option value="juegos">Juegos</option>
+                <option value="noticias">Noticias</option>
+            </select>
+            <label for="caracteristicas">Características:</label>
+            <textarea id="caracteristicas" name="caracteristicas" rows="3" placeholder="Ejemplo: 16GB RAM, SSD 1TB" required></textarea>
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" rows="5" placeholder="Escriba una descripción detallada del producto..." required></textarea>
+            <label for="alias">Alias del usuario:</label>
+            <input type="text" id="alias" name="alias" placeholder="Ejemplo: GamerPro" required>
+            <label for="nombreCompleto">Nombre completo:</label>
+            <input type="text" id="nombreCompleto" name="nombreCompleto" placeholder="Ejemplo: Juan Pérez" required>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ejemplo: 76543210" required>
+            <label for="imagen">Imagen del producto:</label>
+            <input type="file" id="imagen" name="imagen" accept="image/*" required>
+            <div class="acciones">
+                <a href="Interfaz.html" class="cancelar">Cancelar</a>
+                <button type="submit" class="subir">Subir producto</button>
+            </div>
+        </form>
+    </div>
+    <script src="Agregar.js"></script>
+</body>
+</html>

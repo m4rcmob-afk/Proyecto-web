@@ -5,7 +5,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body {
-    background-image: url(../Imagenes/FondoContacto.jpg);
+    background-image: url(../Imagenes/FondoInicio.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
@@ -15,27 +15,30 @@ body {
     min-height: 100vh;
     padding: 20px;
 }
-.container-contacto {
+.container-form {
     background: linear-gradient(to top, #001f3f 0%, #00f0ff 50%, #0a0a0a 100%);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
     width: 100%;
     max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.container-contacto h2 {
+.container-form h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: white;
+    color: #00f0ff;
     text-shadow: 0 0 5px #00f0ff;
 }
 label {
     display: block;
     margin-top: 15px;
     font-weight: bold;
-    color: white;
+    color: #00f0ff;
 }
-input, textarea {
+input, select, textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -45,7 +48,7 @@ input, textarea {
     color: white;
     font-size: 14px;
 }
-input:focus, textarea:focus {
+input:focus, select:focus, textarea:focus {
     outline: none;
     border: 1px solid #00aacc;
     box-shadow: 0 0 5px #00f0ff;
@@ -53,42 +56,51 @@ input:focus, textarea:focus {
 .acciones {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     margin-top: 20px;
 }
-.volver {
-    background-color: #111;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-.volver:hover {
-    background-color: #00f0ff;
-    color: #000;
-}
-.enviar {
-    background-color: #00f0ff;
-    color: #000;
-    font-weight: bold;
-    border: none;
+.cancelar, .subir {
+    display: inline-block;
+    text-align: center;
     padding: 12px 20px;
     border-radius: 5px;
+    font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-.enviar:hover {
+.cancelar {
+    background-color: #111;
+    color: #00f0ff;
+    text-decoration: none;
+}
+.cancelar:hover {
+    background-color: #00f0ff;
+    color: #000;
+}
+.subir {
+    background-color: #00f0ff;
+    color: #000;
+    border: none;
+}
+.subir:hover {
     background-color: #00aacc;
 }
-@media (max-width: 768px) {
-    .acciones {
-        flex-direction: column;
-        gap: 10px;
+@media (max-width: 1024px) {
+    .container-form {
+        max-width: 80%;
     }
-    .volver, .enviar {
-        width: 100%;
-        text-align: center;
+}
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    .container-form {
+        padding: 20px;
+        max-width: 100%;
+    }
+    input, select, textarea {
+        font-size: 13px;
+    }
+    .cancelar, .subir {
+        padding: 10px;
     }
 }

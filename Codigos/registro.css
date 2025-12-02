@@ -20,7 +20,7 @@ body {
 .informacion {
     flex: 1;
     padding: 20px;
-    background-image: url(/Imagenes/LogoInicio.webp);
+    background-image: url(../Imagenes/LogoInicio.webp);
     background-repeat: no-repeat;
     background-size: cover;
 }

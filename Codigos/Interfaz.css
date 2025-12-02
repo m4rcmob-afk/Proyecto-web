@@ -130,7 +130,7 @@ body {
     background-color: #00aacc;
 }
 .secciones {
-    background: linear-gradient(to top, #001f3f 0%, #00f0ff 50%, transparent 100%);
+    background: linear-gradient(to top, #001f3f 0%, #09949e 50%, transparent 100%);
     padding: 30px;
     border-radius: 10px;
 }
@@ -138,6 +138,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    justify-items: center;
     margin-bottom: 40px;
 }
 .productos h2 {
@@ -146,20 +147,26 @@ body {
     margin-bottom: 20px;
     font-size: 26px;
     color: #00f0ff;
-    text-shadow: 0 0 5px #00f0ff;
+    text-shadow: 0 0 5px #0e6167;
 }
 .producto {
+    width: 100%;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: rgba(17, 17, 17, 0.9);
     border: 1px solid #00f0ff;
     border-radius: 10px;
     padding: 15px;
     text-align: center;
-    color: white;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
 }
 .producto img {
-    max-width: 100%;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 .producto h3 {
     font-size: 20px;
@@ -168,6 +175,13 @@ body {
 .producto p {
     font-size: 16px;
     margin-bottom: 10px;
+}
+.descripcion {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    min-height: 70px;
+    flex-grow: 1;
 }
 .producto button {
     background-color: #00f0ff;
@@ -178,6 +192,7 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: auto;
 }
 .producto button:hover {
     background-color: #00aacc;
@@ -192,9 +207,6 @@ footer {
 @media (max-width: 1024px) {
     .titulo {
         font-size: 24px;
-    }
-    .productos {
-        grid-template-columns: repeat(2, 1fr);
     }
     .buscador input {
         width: 70%;
@@ -215,10 +227,10 @@ footer {
     .titulo {
         font-size: 20px;
     }
-    .productos {
-        grid-template-columns: 1fr;
-    }
     .buscador input {
         width: 90%;
+    }
+    .producto {
+        max-width: 100%;
     }
 }
