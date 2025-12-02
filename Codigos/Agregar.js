@@ -8,5 +8,5 @@ document.getElementById("formProducto").addEventListener("submit", function (eve
     const nombreCompleto = document.getElementById("nombreCompleto").value;
     const telefono = document.getElementById("telefono").value;
     alert(`Producto "${titulo}" subido correctamente.\nAlias: ${alias}\nTeléfono: ${telefono}`);
-    window.location.href = "Interfaz.html";
+    window.location.href = "index.html";
 });

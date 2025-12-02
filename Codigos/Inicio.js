@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             return;
         }
         if (correo === "marco070107@gmail.com" && contraseña === "070107"){
-            window.location.href = "Interfaz.html";
+            window.location.href = "index.html";
         } else {
             alert("Correo o contraseña incorrectos");
         }
