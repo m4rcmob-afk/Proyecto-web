@@ -1,9 +1,15 @@
+/* Reinicia margenes y rellenos
+   Usa caja de tamanos consistente y fuente comun */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+/* Cuerpo con imagen de fondo
+   Ajusta para cubrir toda la pantalla
+   Centra el contenido en ambos ejes
+   Texto en blanco y altura completa */
 body {
     background-image: url(../Imagenes/FondoContacto.jpg);
     background-size: cover;
@@ -15,6 +21,9 @@ body {
     min-height: 100vh;
     padding: 20px;
 }
+/* Contenedor del formulario de contacto
+   Fondo con degradado azul y negro
+   Bordes redondeados sombra cian y ancho maximo controlado */
 .container-contacto {
     background: linear-gradient(to top, #001f3f 0%, #00f0ff 50%, #0a0a0a 100%);
     padding: 30px;
@@ -23,18 +32,25 @@ body {
     width: 100%;
     max-width: 500px;
 }
+/* Titulo del formulario centrado
+   Texto blanco con brillo cian */
 .container-contacto h2 {
     text-align: center;
     margin-bottom: 20px;
     color: white;
     text-shadow: 0 0 5px #00f0ff;
 }
+/* Etiquetas de los campos
+   Se muestran en bloque con negrita y color blanco */
 label {
     display: block;
     margin-top: 15px;
     font-weight: bold;
     color: white;
 }
+/* Campos de texto y area de mensaje
+   Ocupan todo el ancho con fondo oscuro
+   Bordes cian y texto blanco */
 input, textarea {
     width: 100%;
     padding: 10px;
@@ -45,17 +61,23 @@ input, textarea {
     color: white;
     font-size: 14px;
 }
+/* Estado de enfoque en campos
+   Cambia borde a azul mas oscuro y agrega brillo cian */
 input:focus, textarea:focus {
     outline: none;
     border: 1px solid #00aacc;
     box-shadow: 0 0 5px #00f0ff;
 }
+/* Contenedor de acciones
+   Distribuye botones en extremos y centra verticalmente */
 .acciones {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
 }
+/* Boton de volver
+   Fondo oscuro texto blanco y transicion de color */
 .volver {
     background-color: #111;
     color: white;
@@ -69,6 +91,9 @@ input:focus, textarea:focus {
     background-color: #00f0ff;
     color: #000;
 }
+/* Boton de enviar
+   Fondo cian texto negro y bordes redondeados
+   Transicion suave al pasar el cursor */
 .enviar {
     background-color: #00f0ff;
     color: #000;
@@ -82,6 +107,9 @@ input:focus, textarea:focus {
 .enviar:hover {
     background-color: #00aacc;
 }
+/* Ajustes responsivos para pantallas pequenas
+   Acciones en columna con espacio entre botones
+   Botones ocupan todo el ancho y texto centrado */
 @media (max-width: 768px) {
     .acciones {
         flex-direction: column;

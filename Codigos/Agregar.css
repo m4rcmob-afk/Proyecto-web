@@ -1,9 +1,15 @@
+/* Reinicia margenes y rellenos
+   Usa caja de tamanos consistente y fuente comun */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+/* Cuerpo con imagen de fondo
+   Ajusta para cubrir toda la pantalla
+   Centra el contenido en ambos ejes
+   Texto en blanco y altura completa */
 body {
     background-image: url(../Imagenes/FondoInicio.jpg);
     background-size: cover;
@@ -15,6 +21,10 @@ body {
     min-height: 100vh;
     padding: 20px;
 }
+/* Contenedor del formulario
+   Fondo con degradado azul y negro
+   Bordes redondeados sombra cian y ancho maximo controlado
+   Diseno en columna centrado */
 .container-form {
     background: linear-gradient(to top, #001f3f 0%, #00f0ff 50%, #0a0a0a 100%);
     padding: 30px;
@@ -26,18 +36,25 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+/* Titulo del formulario centrado
+   Texto cian con brillo */
 .container-form h2 {
     text-align: center;
     margin-bottom: 20px;
     color: #00f0ff;
     text-shadow: 0 0 5px #00f0ff;
 }
+/* Etiquetas de los campos
+   Se muestran en bloque con negrita y color cian */
 label {
     display: block;
     margin-top: 15px;
     font-weight: bold;
     color: #00f0ff;
 }
+/* Campos de texto selectores y area de mensaje
+   Ocupan todo el ancho con fondo oscuro
+   Bordes cian y texto blanco */
 input, select, textarea {
     width: 100%;
     padding: 10px;
@@ -48,16 +65,22 @@ input, select, textarea {
     color: white;
     font-size: 14px;
 }
+/* Estado de enfoque en campos
+   Cambia borde a azul mas oscuro y agrega brillo cian */
 input:focus, select:focus, textarea:focus {
     outline: none;
     border: 1px solid #00aacc;
     box-shadow: 0 0 5px #00f0ff;
 }
+/* Contenedor de acciones
+   Distribuye botones en extremos con margen superior */
 .acciones {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
+/* Botones de cancelar y subir
+   Estilo uniforme con transicion de color */
 .cancelar, .subir {
     display: inline-block;
     text-align: center;
@@ -67,6 +90,8 @@ input:focus, select:focus, textarea:focus {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+/* Boton cancelar
+   Fondo oscuro texto cian y transicion al pasar el cursor */
 .cancelar {
     background-color: #111;
     color: #00f0ff;
@@ -76,6 +101,8 @@ input:focus, select:focus, textarea:focus {
     background-color: #00f0ff;
     color: #000;
 }
+/* Boton subir
+   Fondo cian texto negro y transicion al pasar el cursor */
 .subir {
     background-color: #00f0ff;
     color: #000;
@@ -84,11 +111,15 @@ input:focus, select:focus, textarea:focus {
 .subir:hover {
     background-color: #00aacc;
 }
+/* Ajustes para pantallas medianas
+   Reduce ancho maximo del formulario */
 @media (max-width: 1024px) {
     .container-form {
         max-width: 80%;
     }
 }
+/* Ajustes para pantallas pequenas
+   Reduce padding y ajusta tamano de texto y botones */
 @media (max-width: 768px) {
     body {
         padding: 10px;

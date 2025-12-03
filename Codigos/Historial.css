@@ -1,9 +1,14 @@
+/* Resetea margenes y rellenos
+   Usa caja de tamanos consistente y fuente comun */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+/* Cuerpo con degradado de fondo
+   Texto blanco y altura completa
+   Estructura en columna para acomodar encabezado contenido y pie */
 body {
     background: linear-gradient(to top, #001f3f 0%, #00f0ff 50%, transparent 100%);
     color: white;
@@ -11,6 +16,9 @@ body {
     display: flex;
     flex-direction: column;
 }
+/* Barra de encabezado
+   Alinea elementos en fila con espacio entre ellos
+   Fondo negro y sombra cian */
 .encabezado {
     display: flex;
     align-items: center;
@@ -19,10 +27,14 @@ body {
     padding: 15px 30px;
     box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
 }
+/* Logo con sombra suave cian y altura controlada */
 .logo img {
     height: 60px;
     filter: drop-shadow(0 0 5px #00f0ff);
 }
+/* Titulo centrado
+   Crece para ocupar el espacio disponible
+   Tamaño medio en negrita con brillo cian */
 .titulo {
     flex-grow: 1;
     text-align: center;
@@ -30,6 +42,8 @@ body {
     font-weight: bold;
     text-shadow: 0 0 5px #00f0ff;
 }
+/* Boton de login destacado en cian
+   Bordes redondeados y transicion de color al pasar el cursor */
 .botonLogin {
     background-color: #00f0ff;
     color: #000;
@@ -42,6 +56,9 @@ body {
 .botonLogin:hover {
     background-color: #00aacc;
 }
+/* Area principal
+   Crece para llenar el espacio
+   Centra el contenedor de historial con margen interior */
 main {
     flex-grow: 1;
     display: flex;
@@ -49,6 +66,10 @@ main {
     align-items: flex-start;
     padding: 30px;
 }
+/* Contenedor del historial
+   Ancho maximo controlado
+   Fondo oscuro con transparencia ligera
+   Sombra y esquinas redondeadas */
 .historialContenedor {
     width: 100%;
     max-width: 1000px;
@@ -57,18 +78,24 @@ main {
     padding: 30px;
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
 }
+/* Titulo del historial centrado y resaltado en cian */
 .historialContenedor h2 {
     text-align: center;
     margin-bottom: 20px;
     color: #00f0ff;
     text-shadow: 0 0 5px #00f0ff;
 }
+/* Lista de items del historial en columna
+   Espacio uniforme entre tarjetas y margen inferior amplio */
 .historialItems {
     display: flex;
     flex-direction: column;
     gap: 20px;
     margin-bottom: 40px;
 }
+/* Tarjeta de historial
+   Dispuesta en fila con separacion
+   Fondo oscuro borde cian y esquinas redondeadas */
 .historialItem {
     display: flex;
     gap: 20px;
@@ -78,41 +105,54 @@ main {
     padding: 15px;
     align-items: center;
 }
+/* Imagen del item
+   Tamaño cuadrado recortado y esquinas suaves */
 .historialItem img {
     width: 120px;
     height: 120px;
     object-fit: cover;
     border-radius: 8px;
 }
+/* Bloque de informacion que ocupa el espacio restante */
 .info {
     flex-grow: 1;
 }
+/* Nombre del producto o item con tamano claro y margen inferior corto */
 .info h3 {
     font-size: 20px;
     margin-bottom: 5px;
 }
+/* Precio destacado en tono cian claro con negrita */
 .precio {
     color: #9feaff;
     font-weight: bold;
     margin-bottom: 10px;
 }
+/* Texto descriptivo breve y legible */
 .descripcion {
     font-size: 14px;
     margin-bottom: 10px;
 }
+/* Informacion del usuario asociada al item */
 .usuario {
     font-size: 14px;
     margin-bottom: 10px;
 }
+/* Alias interactivo
+   Subrayado con color cian y cursor de enlace */
 .alias {
     color: #00f0ff;
     cursor: pointer;
     text-decoration: underline;
 }
+/* Fecha en estilo discreto
+   Tamano pequeno y color gris claro */
 .fecha {
     font-size: 13px;
     color: #ccc;
 }
+/* Pie de pagina pegado al final
+   Fondo negro texto cian centrado y tamaño discreto */
 footer {
     background-color: #000;
     color: #00f0ff;
@@ -121,6 +161,8 @@ footer {
     font-size: 14px;
     margin-top: auto;
 }
+/* Ajustes responsivos
+   Las tarjetas se apilan y la imagen se hace fluida en pantallas pequenas */
 @media (max-width: 768px) {
     .historialItem {
         flex-direction: column;

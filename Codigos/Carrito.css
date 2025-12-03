@@ -1,3 +1,6 @@
+/* Cuerpo de la pagina
+   Fondo con degradado azul hacia transparente
+   Texto blanco altura completa y estructura en columna */
 body {
     background: linear-gradient(to top, #001f3f 0%, #00f0ff 50%, transparent 100%);
     color: white;
@@ -5,6 +8,9 @@ body {
     display: flex;
     flex-direction: column;
 }
+/* Barra de encabezado
+   Elementos alineados en fila con espacio entre ellos
+   Fondo negro y sombra cian */
 .encabezado {
     display: flex;
     align-items: center;
@@ -13,10 +19,14 @@ body {
     padding: 15px 30px;
     box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
 }
+/* Logo con sombra cian y altura controlada */
 .logo img {
     height: 60px;
     filter: drop-shadow(0 0 5px #00f0ff);
 }
+/* Titulo centrado
+   Crece para ocupar espacio disponible
+   Texto grande en negrita con brillo cian */
 .titulo {
     flex-grow: 1;
     text-align: center;
@@ -24,6 +34,8 @@ body {
     font-weight: bold;
     text-shadow: 0 0 5px #00f0ff;
 }
+/* Boton de login destacado en cian
+   Bordes redondeados y transicion de color */
 .botonLogin {
     background-color: #00f0ff;
     color: #000;
@@ -36,6 +48,9 @@ body {
 .botonLogin:hover {
     background-color: #00aacc;
 }
+/* Area principal
+   Crece para llenar espacio
+   Centra el contenedor del carrito con margen interior */
 main {
     flex-grow: 1;
     display: flex;
@@ -43,6 +58,10 @@ main {
     align-items: flex-start;
     padding: 30px;
 }
+/* Contenedor del carrito
+   Ancho maximo controlado
+   Fondo oscuro con transparencia ligera
+   Sombra y esquinas redondeadas */
 .carritoContenedor {
     width: 100%;
     max-width: 1000px;
@@ -51,17 +70,23 @@ main {
     padding: 30px;
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
 }
+/* Titulo del carrito centrado y resaltado en cian */
 .carritoContenedor h2 {
     text-align: center;
     margin-bottom: 20px;
     color: #00f0ff;
     text-shadow: 0 0 5px #00f0ff;
 }
+/* Lista de items del carrito en columna
+   Espacio uniforme entre tarjetas */
 .carritoItems {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
+/* Tarjeta de item del carrito
+   Dispuesta en fila con separacion
+   Fondo oscuro borde cian y esquinas redondeadas */
 .carritoItem {
     display: flex;
     gap: 20px;
@@ -71,37 +96,48 @@ main {
     padding: 15px;
     align-items: center;
 }
+/* Imagen del producto
+   Tamaño cuadrado recortado y esquinas suaves */
 .carritoItem img {
     width: 120px;
     height: 120px;
     object-fit: cover;
     border-radius: 8px;
 }
+/* Bloque de informacion que ocupa espacio restante */
 .info {
     flex-grow: 1;
 }
+/* Nombre del producto con tamaño claro y margen inferior corto */
 .info h3 {
     font-size: 20px;
     margin-bottom: 5px;
 }
+/* Precio destacado en tono cian claro con negrita */
 .precio {
     color: #9feaff;
     font-weight: bold;
     margin-bottom: 10px;
 }
+/* Texto descriptivo breve y legible */
 .descripcion {
     font-size: 14px;
     margin-bottom: 10px;
 }
+/* Informacion del usuario asociada al item */
 .usuario {
     font-size: 14px;
     margin-bottom: 10px;
 }
+/* Alias interactivo
+   Subrayado con color cian y cursor de enlace */
 .alias {
     color: #00f0ff;
     cursor: pointer;
     text-decoration: underline;
 }
+/* Boton para eliminar item
+   Fondo rojo texto blanco y transicion de color */
 .botonEliminar {
     background-color: #ff4d4d;
     color: #fff;
@@ -115,11 +151,16 @@ main {
 .botonEliminar:hover {
     background-color: #cc0000;
 }
+/* Acciones finales del carrito
+   Distribuye botones en extremos con margen superior */
 .accionesFinales {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
 }
+/* Botones de vaciar y comprar
+   Fondo cian texto negro bordes redondeados
+   Transicion suave al pasar el cursor */
 .botonVaciar, .botonComprar {
     background-color: #00f0ff;
     color: #000;
@@ -133,6 +174,8 @@ main {
 .botonVaciar:hover, .botonComprar:hover {
     background-color: #00aacc;
 }
+/* Pie de pagina pegado al final
+   Fondo negro texto cian centrado y tamaño discreto */
 footer {
     background-color: #000;
     color: #00f0ff;
@@ -141,6 +184,9 @@ footer {
     font-size: 14px;
     margin-top: auto;
 }
+/* Ajustes responsivos
+   Las tarjetas se apilan y la imagen se hace fluida
+   Acciones finales en columna con espacio entre botones */
 @media (max-width: 768px) {
     .carritoItem {
         flex-direction: column;

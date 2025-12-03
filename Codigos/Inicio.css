@@ -1,9 +1,15 @@
+/* Reinicia margenes y rellenos
+   Usa caja de tamanos consistente y fuente comun */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+/* Cuerpo con imagen de fondo fija
+   Ocupa toda la altura visible
+   Centra el contenido en pantalla
+   Agrega un relleno general */
 body {
     background-image: url(../Imagenes/FondoInicio.jpg);
     background-repeat: no-repeat;
@@ -15,6 +21,10 @@ body {
     justify-content: center;
     padding: 20px;
 }
+/* Contenedor principal flexible y adaptable
+   Limita el ancho maximo
+   Aplica sombra cian y esquinas redondeadas
+   Oculta desbordes para bordes limpios */
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -24,18 +34,28 @@ body {
     border-radius: 20px;
     overflow: hidden;
 }
+/* Columnas de informacion y formulario
+   Crecen y se adaptan con ancho base
+   Colorean el texto en blanco */
 .informacion, .Formulario {
     flex: 1 1 400px;
     padding: 40px 20px;
     color: #fff;
 }
+/* Panel de informacion con degradado azul oscuro
+   Orientado en diagonal para profundidad visual */
 .informacion {
     background: linear-gradient(135deg, #001f2f 0%, #003f5c 50%, #005f7f 100%);
 }
+/* Panel de formulario con degradado negro a azul
+   Centra el contenido para foco del usuario */
 .Formulario {
     text-align: center;
     background: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #001f2f 100%);
 }
+/* Texto principal responsivo
+   Resaltado en cian con brillo suave
+   En negrita para jerarquia */
 .texto1 {
     font-size: clamp(18px, 2vw, 24px);
     margin-bottom: 25px;
@@ -43,11 +63,15 @@ body {
     color: #00f0ff;
     text-shadow: 0 0 5px #00f0ff;
 }
+/* Parrafo descriptivo responsivo
+   Sombra suave cian para legibilidad en fondo oscuro */
 .descripcion {
     font-size: clamp(14px, 1.5vw, 18px);
     margin-bottom: 40px;
     text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
 }
+/* Indicador de seccion en mayusculas
+   Centrado y destacado en cian */
 .Indicador {
     font-size: 30px;
     text-transform: uppercase;
@@ -56,16 +80,23 @@ body {
     color: #00f0ff;
     text-shadow: 0 0 5px #00f0ff;
 }
+/* Aviso informativo discreto
+   Texto gris claro y tamaño responsivo */
 .aviso {
     font-size: clamp(12px, 1.5vw, 16px);
     margin-bottom: 20px;
     color: #ccc;
 }
+/* Etiquetas con jerarquia clara
+   Tamaño responsivo y color cian */
 label {
     font-size: clamp(12px, 1.5vw, 16px);
     font-weight: bold;
     color: #00f0ff;
 }
+/* Campos de entrada de datos
+   Ocupan el ancho completo
+   Borde cian con fondo oscuro y texto blanco */
 .dato {
     width: 100%;
     padding: 8px;
@@ -75,11 +106,16 @@ label {
     background-color: #111;
     color: white;
 }
+/* Enfoque del campo con resalte
+   Cambio de borde y brillo cian */
 .dato:focus {
     outline: none;
     border: 1px solid #00aacc;
     box-shadow: 0 0 8px #00f0ff;
 }
+/* Boton de enviar destacado
+   Llena el ancho y usa transicion suave
+   Bordes redondeados y texto negro */
 .enviar {
     background-color: #00f0ff;
     color: #000;
@@ -92,14 +128,21 @@ label {
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
+/* Efecto hover del boton
+   Oscurece el cian para feedback visual */
 .enviar:hover {
     background-color: #00aacc;
 }
+/* Barra de acciones de enlaces
+   Distribuye elementos en extremos
+   Espacio superior para respirar */
 .acciones {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
 }
+/* Enlaces de acciones en cian
+   Sin subrayado y con transicion de color */
 .acciones a {
     color: #00f0ff;
     font-size: 14px;
@@ -107,9 +150,14 @@ label {
     font-weight: bold;
     transition: color 0.3s ease;
 }
+/* Hover de enlaces
+   Cambia a blanco para contraste */
 .acciones a:hover {
     color: #fff;
 }
+/* Medios responsivos para pantallas pequenas
+   Apila columnas y centra contenido
+   Reduce relleno para mejor uso del espacio */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;

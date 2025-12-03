@@ -1,9 +1,13 @@
+/* Reinicia margenes y rellenos
+   Usa caja de tamanos consistente y fuente comun */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+/* Cuerpo con fondo oscuro y texto blanco
+   Estructura base limpia y tipografia simple */
 body {
     background-color: #0a0a0a;
     color: white;
@@ -11,12 +15,18 @@ body {
     margin: 0;
     padding: 0;
 }
+/* Contenedor principal flexible
+   Se adapta en filas y ocupa toda la altura visible
+   Agrega espacio interior para respirar */
 .container {
     display: flex;
     flex-wrap: wrap;
     min-height: 100vh;
     padding: 20px;
 }
+/* Panel de informacion
+   Usa imagen de fondo que cubre todo el area
+   Espaciado interno para el contenido */
 .informacion {
     flex: 1;
     padding: 20px;
@@ -24,19 +34,28 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+/* Titulo destacado
+   Color cian y negrita para jerarquia visual */
 .texto1 {
     font-size: 24px;
     font-weight: bold;
     color: #00f0ff;
 }
+/* Parrafo descriptivo
+   Espaciado vertical y lectura comoda */
 .descripcion {
     margin: 15px 0;
     line-height: 1.5;
 }
+/* Indicador o subtitulo
+   Resaltado en cian con margen superior */
 .Indicador {
     color: #00f0ff;
     margin-top: 20px;
 }
+/* Panel del formulario
+   Fondo oscuro con borde cian y esquinas redondeadas
+   Sombra suave para profundidad */
 .Formulario {
     flex: 1;
     background-color: #111;
@@ -45,16 +64,23 @@ body {
     padding: 20px;
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
 }
+/* Texto de aviso
+   Tono discreto y espacio inferior */
 .aviso {
     font-size: 14px;
     margin-bottom: 20px;
 }
+/* Etiquetas de los campos
+   Bloque completo con negrita y color cian */
 .datos label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
     color: #00f0ff;
 }
+/* Campos de entrada
+   Ancho completo fondo oscuro y texto claro
+   Bordes suaves y espacio entre campos */
 .dato {
     width: 100%;
     padding: 10px;
@@ -64,10 +90,15 @@ body {
     background-color: #222;
     color: white;
 }
+/* Estado de enfoque en campos
+   Borde cian y brillo para feedback */
 .dato:focus {
     border: 1px solid #00f0ff;
     box-shadow: 0 0 5px #00f0ff;
 }
+/* Boton de enviar
+   Ocupa todo el ancho con transicion suave
+   Color cian texto negro y bordes redondeados */
 .enviar {
     width: 100%;
     background-color: #00f0ff;
@@ -79,22 +110,33 @@ body {
     border: none;
     transition: background-color 0.3s ease;
 }
+/* Efecto hover del boton
+   Oscurece el cian para indicar interaccion */
 .enviar:hover {
     background-color: #00aacc;
 }
+/* Barra de acciones
+   Enlaces distribuidos a los extremos con margen superior */
 .acciones {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
 }
+/* Enlaces de acciones
+   Color cian sin subrayado y en negrita */
 .acciones a {
     color: #00f0ff;
     text-decoration: none;
     font-weight: bold;
 }
+/* Hover de enlaces
+   Cambia a blanco para mayor contraste */
 .acciones a:hover {
     color: #fff;
 }
+/* Ajustes responsivos para pantallas pequenas
+   Apila el contenedor en columna
+   Agrega margen al formulario para separarlo */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
