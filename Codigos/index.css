@@ -14,21 +14,17 @@ body {
     margin: 0;
     padding: 0;
 }
-/* Encabezado principal con diseno flexible
-   Alinea al centro y separa elementos a los extremos
-   Fondo negro con sombra azul */
+/* Encabezado principal con diseno flexible */
 .encabezado {
     display: flex;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
     align-items: center;
     justify-content: space-between;
     background-color: #000;
     padding: 15px 30px;
     box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+    width: 100%;
 }
-/* Imagen del logo con brillo azul y efecto de zoom al pasar el cursor */
+/* Imagen del logo */
 .logo img {
     height: 80px;
     filter: drop-shadow(0 0 5px #00f0ff);
@@ -37,8 +33,7 @@ body {
 .logo img:hover {
     transform: scale(1.05);
 }
-/* Titulo centrado que ocupa espacio restante
-   Tamaño grande en negrita con brillo azul */
+/* Titulo */
 .titulo {
     flex-grow: 1;
     text-align: center;
@@ -46,13 +41,12 @@ body {
     font-weight: bold;
     text-shadow: 0 0 5px #00f0ff;
 }
-/* Contenedor de acciones con botones separados por espacio */
+/* Acciones */
 .acciones {
     display: flex;
     gap: 10px;
 }
-/* Botones de login y menu con fondo azul
-   Texto negro bordes redondeados y transicion al pasar el cursor */
+/* Botones */
 .boton-login,
 .boton-menu {
     background-color: #00f0ff;
@@ -69,9 +63,7 @@ body {
 .boton-menu:hover {
     background-color: #00aacc;
 }
-/* Menu lateral oculto al inicio
-   Se desliza desde la izquierda y usa transiciones suaves
-   Se deshabilitan eventos mientras esta oculto */
+/* Menu lateral */
 .menu-lateral {
     position: fixed;
     top: 0;
@@ -89,16 +81,12 @@ body {
     opacity: 0;
     pointer-events: none;
 }
-/* Estado activo del menu lateral
-   Lo muestra y habilita interaccion */
 .menu-lateral.activo {
     left: 0;
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
 }
-/* Lista del menu sin vinetas ni rellenos
-   Enlaces con estilo legible y transiciones */
 .menu-lateral nav ul {
     list-style: none;
     padding: 0;
@@ -121,8 +109,7 @@ body {
     background-color: #00f0ff;
     color: #000;
 }
-/* Buscador centrado con campo de texto y boton
-   Estilo acorde al tema oscuro */
+/* Buscador */
 .buscador {
     text-align: center;
     margin: 20px 0;
@@ -154,24 +141,20 @@ body {
 .buscador button:hover {
     background-color: #00aacc;
 }
-/* Secciones con fondo degradado azul
-   Espaciado generoso y esquinas redondeadas */
+/* Secciones */
 .secciones {
     background: linear-gradient(to top, #001f3f 0%, #09949e 50%, transparent 100%);
     padding: 30px;
     border-radius: 10px;
 }
-/* Contenedor de productos en cuadrilla de cuatro columnas
-   Espaciado uniforme y centrado de items */
+/* Contenedor de productos */
 .productos {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en desktop */
     gap: 20px;
     justify-items: center;
     margin-bottom: 40px;
 }
-/* Titulo de la seccion de productos
-   Ocupa todo el ancho y luce resaltado en azul */
 .productos h2 {
     grid-column: 1 / -1;
     text-align: center;
@@ -180,8 +163,7 @@ body {
     color: #00f0ff;
     text-shadow: 0 0 5px #0e6167;
 }
-/* Tarjeta de producto con fondo oscuro y borde azul
-   Diseno en columna para acomodar imagen texto y boton */
+/* Tarjeta de producto */
 .producto {
     width: 100%;
     max-width: 250px;
@@ -194,8 +176,6 @@ body {
     padding: 15px;
     text-align: center;
 }
-/* Imagen del producto recortada al contenedor
-   Mantiene proporciones y esquinas suaves */
 .producto img {
     width: 100%;
     height: 160px;
@@ -203,18 +183,14 @@ body {
     border-radius: 5px;
     margin-bottom: 10px;
 }
-/* Nombre del producto con tamano medio y espacio vertical */
 .producto h3 {
     font-size: 20px;
     margin: 10px 0;
 }
-/* Precio o texto breve con legibilidad equilibrada */
 .producto p {
     font-size: 16px;
     margin-bottom: 10px;
 }
-/* Bloque de descripcion con altura minima
-   Permite crecer para balancear el contenido */
 .descripcion {
     font-size: 14px;
     line-height: 1.4;
@@ -222,8 +198,6 @@ body {
     min-height: 70px;
     flex-grow: 1;
 }
-/* Boton de accion destacado en azul
-   Transicion suave al pasar el cursor */
 .producto button {
     background-color: #00f0ff;
     color: #000;
@@ -238,8 +212,7 @@ body {
 .producto button:hover {
     background-color: #00aacc;
 }
-/* Pie de pagina con fondo negro
-   Texto azul centrado y tamano discreto */
+/* Pie de pagina */
 footer {
     background-color: #000;
     color: #00f0ff;
@@ -247,19 +220,24 @@ footer {
     padding: 20px;
     font-size: 14px;
 }
-/* Ajustes para pantallas medianas
-   Reduce tamano del titulo y ensancha el campo de busqueda */
-@media (max-width: 1024px) {
+/* Tablets: 2 columnas */
+@media (max-width: 900px) {
     .titulo {
         font-size: 24px;
     }
     .buscador input {
         width: 70%;
     }
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .producto {
+        max-width: 500px;
+        width: 100%;
+    }
 }
-/* Ajustes para pantallas pequenas
-   Encabezado en columna logo mas pequeno y tarjetas fluidas */
-@media (max-width: 768px) {
+/* Celulares: 1 columna */
+@media (max-width: 600px) {
     .encabezado {
         flex-direction: column;
         text-align: center;
@@ -276,6 +254,9 @@ footer {
     }
     .buscador input {
         width: 90%;
+    }
+    .productos {
+        grid-template-columns: 1fr;
     }
     .producto {
         max-width: 100%;
