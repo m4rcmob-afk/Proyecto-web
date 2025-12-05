@@ -11,7 +11,7 @@
    Centra el contenido en pantalla
    Agrega un relleno general */
 body {
-    background-image: url(../Imagenes/FondoInicio.jpg);
+    background-image: url(../../Imagenes/FondoInicio.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;

@@ -11,7 +11,7 @@
    Centra el contenido en ambos ejes
    Texto en blanco y altura completa */
 body {
-    background-image: url(../Imagenes/FondoInicio.jpg);
+    background-image: url(../../Imagenes/FondoInicio.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
@@ -26,7 +26,7 @@ body {
    Bordes redondeados sombra cian y ancho maximo controlado
    Diseno en columna centrado */
 .container-form {
-    background: linear-gradient(to top, #001f3f 0%, #00f0ff 50%, #0a0a0a 100%);
+    background: linear-gradient(to top, #001f3f 0%, #075a60 50%, #0a0a0a 100%);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Agregar Producto - DeltaStore</title>
-    <link rel="stylesheet" href="Agregar.css">
+    <link rel="stylesheet" href="../Estilos/Agregar.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -19,7 +19,6 @@
                 <option value="equipos">Equipos gamer</option>
                 <option value="accesorios">Accesorios</option>
                 <option value="juegos">Juegos</option>
-                <option value="noticias">Noticias</option>
             </select>
             <label for="caracteristicas">Características:</label>
             <textarea id="caracteristicas" name="caracteristicas" rows="3" placeholder="Ejemplo: 16GB RAM, SSD 1TB" required></textarea>
@@ -33,12 +32,14 @@
             <input type="tel" id="telefono" name="telefono" placeholder="Ejemplo: 76543210" required>
             <label for="imagen">Imagen del producto:</label>
             <input type="file" id="imagen" name="imagen" accept="image/*" required>
+            <label for="precio">Precio (USD):</label>
+            <input type="number" id="precio" name="precio" placeholder="Ej: 199.99" step="0.01" min="0" required>
             <div class="acciones">
                 <a href="index.html" class="cancelar">Cancelar</a>
                 <button type="submit" class="subir">Subir producto</button>
             </div>
         </form>
-    </div>
-    <script src="Agregar.js"></script>
+    <script src="../Funcionalidad/Autenticacion.js"></script>
+    <script src="../Funcionalidad/Agregar.js"></script>
 </body>
 </html>

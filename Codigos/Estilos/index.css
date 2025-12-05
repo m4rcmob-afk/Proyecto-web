@@ -23,6 +23,9 @@ body {
     padding: 15px 30px;
     box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
     width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 /* Imagen del logo */
 .logo img {
@@ -45,6 +48,78 @@ body {
 .acciones {
     display: flex;
     gap: 10px;
+    align-items: center;
+    position: relative;
+}
+
+/* Perfil del usuario */
+.perfil-usuario {
+    position: relative;
+}
+
+.perfil-menu {
+    position: relative;
+}
+
+.btn-perfil {
+    background-color: #00f0ff;
+    color: #000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+.btn-perfil:hover {
+    background-color: #00aacc;
+}
+
+.menu-perfil {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #111;
+    border: 1px solid #00f0ff;
+    border-radius: 5px;
+    min-width: 200px;
+    margin-top: 8px;
+    display: none;
+    flex-direction: column;
+    z-index: 1001;
+    box-shadow: 0 4px 12px rgba(0, 240, 255, 0.3);
+}
+
+.menu-perfil.activo {
+    display: flex;
+}
+
+.menu-item {
+    display: block;
+    padding: 12px 16px;
+    color: #00f0ff;
+    text-decoration: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: left;
+    width: 100%;
+    border-bottom: 1px solid #222;
+    font-family: Arial, sans-serif;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item:hover {
+    background-color: #00f0ff;
+    color: #000;
+    font-weight: bold;
 }
 /* Botones */
 .boton-login,
@@ -147,6 +222,70 @@ body {
     padding: 30px;
     border-radius: 10px;
 }
+
+/* Fondos vistosos por sección - contraste asegurado */
+#consolas {
+    background: linear-gradient(135deg, #081c3d 0%, #045a76 100%);
+    padding: 22px;
+    border-radius: 12px;
+    margin-bottom: 22px;
+}
+#consolas h2 {
+    color: #fffbe6;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.45);
+}
+
+#equipos {
+    background: linear-gradient(135deg, #2b0b3a 0%, #7a1ea6 100%);
+    padding: 22px;
+    border-radius: 12px;
+    margin-bottom: 22px;
+}
+#equipos h2 {
+    color: #f6ecff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.45);
+}
+
+#accesorios {
+    background: linear-gradient(135deg, #3b2100 0%, #cc7a00 100%);
+    padding: 22px;
+    border-radius: 12px;
+    margin-bottom: 22px;
+}
+#accesorios h2 {
+    color: #fff8ef;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.45);
+}
+
+#juegos {
+    background: linear-gradient(135deg, #4a0f2f 0%, #d4448b 100%);
+    padding: 22px;
+    border-radius: 12px;
+    margin-bottom: 22px;
+}
+#juegos h2 {
+    color: #fff0f6;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.45);
+}
+
+#noticias {
+    background: linear-gradient(135deg, #0b3d12 0%, #2fb86b 100%);
+    padding: 22px;
+    border-radius: 12px;
+    margin-bottom: 22px;
+}
+#noticias h2 {
+    color: #effff3;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.45);
+}
+
+/* Ajustes para mantener buen contraste en móviles (evita degradados muy intensos en pantallas pequeñas) */
+@media (max-width: 600px) {
+    #consolas, #equipos, #accesorios, #juegos, #noticias {
+        padding: 16px;
+        border-radius: 8px;
+    }
+}
 /* Contenedor de productos */
 .productos {
     display: grid;
@@ -175,6 +314,9 @@ body {
     border-radius: 10px;
     padding: 15px;
     text-align: center;
+    transition: transform 280ms cubic-bezier(.2,.9,.2,1), box-shadow 280ms ease, border-color 280ms ease;
+    will-change: transform, box-shadow;
+    z-index: 1;
 }
 .producto img {
     width: 100%;
@@ -182,6 +324,7 @@ body {
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 10px;
+    transition: transform 380ms cubic-bezier(.2,.9,.2,1), filter 280ms ease;
 }
 .producto h3 {
     font-size: 20px;
@@ -211,6 +354,20 @@ body {
 }
 .producto button:hover {
     background-color: #00aacc;
+}
+
+/* Animación y estilo al pasar el cursor sobre la tarjeta */
+.producto:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 14px 30px rgba(0,160,180,0.12), 0 6px 12px rgba(0,0,0,0.6);
+    border-color: #00aacc;
+}
+.producto:hover img {
+    transform: scale(1.06);
+    filter: brightness(1.03) saturate(1.05);
+}
+.producto:hover .descripcion {
+    color: #e6ffff;
 }
 /* Pie de pagina */
 footer {
@@ -260,5 +417,44 @@ footer {
     }
     .producto {
         max-width: 100%;
+    }
+}
+
+/* Escritorio: mostrar el menú lateral debajo del header y ocultar el botón hamburguesa */
+@media (min-width: 901px) {
+    .boton-menu {
+        display: none;
+    }
+    .menu-lateral {
+        position: static;
+        top: auto;
+        left: auto;
+        width: 100%;
+        max-width: none;
+        height: auto;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0 20px 10px 20px;
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+        transform: none;
+    }
+    .menu-lateral nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+        padding: 12px 0;
+    }
+    .menu-lateral nav ul li {
+        margin: 0;
+    }
+    .menu-lateral nav ul li a {
+        background: transparent;
+        color: #00f0ff;
+        padding: 8px 10px;
+        border-radius: 6px;
+        font-size: 15px;
     }
 }

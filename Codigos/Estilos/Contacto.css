@@ -11,7 +11,7 @@
    Centra el contenido en ambos ejes
    Texto en blanco y altura completa */
 body {
-    background-image: url(../Imagenes/FondoContacto.jpg);
+    background-image: url(../../Imagenes/FondoContacto.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
