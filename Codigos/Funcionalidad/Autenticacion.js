@@ -1,3 +1,9 @@
+/*
+    Autenticacion.js
+    - Maneja validaciones, gestión de usuarios, sesión, carrito, historial y productos
+    - Usa localStorage como almacenamiento simple para demo
+    - Los métodos son intencionalmente sencillos y documentados abajo
+*/
 const Validaciones = {
     // Verifica que el correo tenga el formato correcto (usuario@dominio.com)
     correo: (correo) => {

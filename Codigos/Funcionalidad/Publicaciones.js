@@ -1,8 +1,8 @@
-/**
- * Página de 'Mis Publicaciones' - muestra los productos que ha subido el usuario
- * Permite ocultar (eliminar de la vista pública) cada publicación
- */
-
+/*
+  Publicaciones.js
+  - Página "Mis Publicaciones" donde el vendedor puede ver y ocultar sus productos.
+  - Marca `visible = false` para ocultar productos y notifica a otras pestañas.
+*/
 document.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.querySelector(".publicacionesItems");
 
@@ -11,27 +11,21 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "Inicio.html";
     return;
   }
-
   renderizarPublicaciones();
-
   function renderizarPublicaciones() {
     const usuario = GestorSesion.obtenerUsuarioLogueado();
     // Trae solo los productos del usuario y que estén visibles (no eliminados)
     const productos = GestorProductos.obtenerProductos().filter(
       (p) => p && p.vendedor && p.vendedor.correo === usuario.correo && p.visible !== false
     );
-
     contenedor.innerHTML = "";
-
     if (productos.length === 0) {
       contenedor.innerHTML = '<p style="color:#aaa; padding:20px; text-align:center;">No has publicado productos aún.</p>';
       return;
     }
-
     productos.forEach((producto) => {
       // Si el producto fue ocultado, lo mostramos como eliminado
       const estado = producto.visible === false ? "(Oculto)" : "";
-
       const card = document.createElement("div");
       card.className = "producto";
       card.style.marginBottom = "15px";
@@ -56,16 +50,13 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         </div>
       `;
-
       contenedor.appendChild(card);
     });
-
     // asignar eventos de eliminar
     contenedor.querySelectorAll(".btn-ocultar").forEach((btn) => {
       btn.addEventListener("click", (e) => {
         const id = Number(e.target.getAttribute("data-id"));
         if (!confirm("¿Deseas eliminar esta publicación? Esto la ocultará de la tienda pública.")) return;
-
         // Marca el producto como no visible
         const todos = GestorProductos.obtenerProductos();
         const idx = todos.findIndex((p) => Number(p.id) === Number(id));

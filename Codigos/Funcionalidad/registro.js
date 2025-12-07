@@ -1,5 +1,10 @@
+/*
+    registro.js
+    - Lógica de creación de cuentas: valida datos y guarda el usuario en localStorage
+    - Conecta al usuario tras registro (flujo de onboarding simple)
+*/
 document.addEventListener("DOMContentLoaded", () => {
-    const formulario = document.querySelector(".Formulario");
+        const formulario = document.querySelector(".Formulario");
     const nombreInput = document.querySelector("input[name='nombre']");
     const aliasInput = document.querySelector("input[name='alias']");
     const telefonoInput = document.querySelector("input[name='telefono']");

@@ -1,3 +1,8 @@
+/*
+    index.js
+    - Interacciones generales del sitio: menú lateral, perfil en header, búsqueda y carga dinámica de productos.
+    - Añadimos listeners con guardas para evitar duplicados y comprobaciones para UX móvil.
+*/
 document.addEventListener("DOMContentLoaded", () => {
     // Permite abrir y cerrar el menú en dispositivos móviles
     const abrirMenu = document.getElementById("abrirMenu");
@@ -5,11 +10,37 @@ document.addEventListener("DOMContentLoaded", () => {
     abrirMenu.addEventListener("click", () => {
         menuLateral.classList.toggle("activo");
     });
+    // Cerrar el menú lateral si se hace clic fuera de él
+    document.addEventListener('click', (e) => {
+        const abierto = menuLateral && menuLateral.classList.contains('activo');
+        if (abierto) {
+            // si el clic no ocurrió dentro del menú ni sobre el botón que lo abre, cerrarlo
+            if (!menuLateral.contains(e.target) && !abrirMenu.contains(e.target)) {
+                menuLateral.classList.remove('activo');
+            }
+        }
+    });
+    // Cerrar el menú lateral al navegar por cualquiera de sus enlaces (mejora UX en móvil)
+    if (menuLateral) {
+        const links = menuLateral.querySelectorAll('a');
+        links.forEach((lnk) => {
+            lnk.addEventListener('click', () => {
+                if (menuLateral.classList.contains('activo')) menuLateral.classList.remove('activo');
+            });
+        });
+    }
     // Muestra el perfil del usuario conectado o el botón de login
     actualizarEstadoUsuario();
     // Escucha cuando alguien inicia o cierra sesión (en cualquier pestaña)
     window.addEventListener("usuarioLogueado", actualizarEstadoUsuario);
     window.addEventListener("usuarioCerrado", actualizarEstadoUsuario);
+    // Listener único para cerrar cualquier menú-perfil al hacer clic fuera (evita duplicados)
+    document.addEventListener("click", (e) => {
+        const abierto = document.querySelector(".menu-perfil.activo");
+        if (abierto && !abierto.parentElement.contains(e.target)) {
+            abierto.classList.remove("activo");
+        }
+    });
     function actualizarEstadoUsuario() {
         const usuario = GestorSesion.obtenerUsuarioLogueado();
         const acciones = document.querySelector(".acciones");
@@ -21,10 +52,12 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             // Crear o actualizar el menú del perfil
             let perfil = document.querySelector(".perfil-usuario");
+            let creadoAhora = false;
             if (!perfil) {
                 perfil = document.createElement("div");
                 perfil.className = "perfil-usuario";
                 acciones.insertBefore(perfil, botonLogin);
+                creadoAhora = true;
             }
             perfil.innerHTML = `
         <div class="perfil-menu">
@@ -38,29 +71,57 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
         </div>
       `;
-            // Configurar eventos del menú perfil
+            // Configurar eventos del menú perfil (solo si acabamos de crear el nodo)
             const btnPerfil = perfil.querySelector(".btn-perfil");
             const menuPerfil = perfil.querySelector(".menu-perfil");
             const logoutBtn = perfil.querySelector(".logout-btn");
-            // Abre/cierra el menú al hacer clic en el botón del perfil
-            btnPerfil.addEventListener("click", (e) => {
-                e.stopPropagation();
-                menuPerfil.classList.toggle("activo");
-            });
-            // Cierra sesión con confirmación
-            logoutBtn.addEventListener("click", () => {
-                if (confirm("¿Estás seguro de que deseas cerrar sesión?")) {
-                    GestorSesion.cerrarSesion();
-                    alert("✓ Sesión cerrada correctamente");
-                    actualizarEstadoUsuario();
+            if (creadoAhora) {
+                // Abre/cierra el menú al hacer clic en el botón del perfil
+                btnPerfil.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    menuPerfil.classList.toggle("activo");
+                });
+                // Cierra sesión con confirmación
+                logoutBtn.addEventListener("click", () => {
+                    if (confirm("¿Estás seguro de que deseas cerrar sesión?")) {
+                        GestorSesion.cerrarSesion();
+                        alert("✓ Sesión cerrada correctamente");
+                        actualizarEstadoUsuario();
+                    }
+                });
+            }
+
+            // --- Añadir versión del perfil dentro del menú lateral para dispositivos móviles
+            const menuUl = document.querySelector('#menuLateral nav ul');
+            if (menuUl) {
+                let mobilePerfil = menuUl.querySelector('.perfil-mobile');
+                if (!mobilePerfil) {
+                    mobilePerfil = document.createElement('li');
+                    mobilePerfil.className = 'perfil-mobile';
+                    menuUl.insertBefore(mobilePerfil, menuUl.firstChild);
                 }
-            });
-            // Cierra el menú perfil si haces clic fuera de él
-            document.addEventListener("click", (e) => {
-                if (!perfil.contains(e.target)) {
-                    menuPerfil.classList.remove("activo");
+                const correo = usuario.correo || '';
+                mobilePerfil.innerHTML = `
+                    <div style="padding:12px 8px;border-bottom:1px solid rgba(255,255,255,0.05)">
+                        <strong>${usuario.nombre || usuario.alias || 'Usuario'}</strong><br>
+                        <small>${correo}</small>
+                    </div>
+                    <a href="Publicaciones.html">📦 Mis Publicaciones</a>
+                    <button id="mobileCerrarSesion" style="display:block;margin:10px 8px;padding:8px;border-radius:6px;">Cerrar Sesión</button>
+                `;
+                const logoutBtn = mobilePerfil.querySelector('#mobileCerrarSesion');
+                if (logoutBtn) {
+                    logoutBtn.addEventListener('click', () => {
+                        if (confirm('¿Estás seguro de que deseas cerrar sesión?')) {
+                            GestorSesion.cerrarSesion();
+                            // cerrar menú lateral si está abierto
+                            const menuLateral = document.getElementById('menuLateral');
+                            if (menuLateral && menuLateral.classList.contains('activo')) menuLateral.classList.remove('activo');
+                            actualizarEstadoUsuario();
+                        }
+                    });
                 }
-            });
+            }
         } else {
             // El usuario no está conectado: mostrar botón login
             const perfil = document.querySelector(".perfil-usuario");
@@ -69,6 +130,12 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             if (botonLogin) {
                 botonLogin.style.display = "inline-block";
+            }
+            // Eliminar la entrada móvil de perfil si existe
+            const menuUl = document.querySelector('#menuLateral nav ul');
+            if (menuUl) {
+                const mobilePerfil = menuUl.querySelector('.perfil-mobile');
+                if (mobilePerfil) mobilePerfil.remove();
             }
         }
     }

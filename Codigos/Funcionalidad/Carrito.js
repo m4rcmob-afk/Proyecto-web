@@ -1,5 +1,10 @@
+/*
+    Carrito.js
+    - Renderiza el contenido del carrito, permite eliminar items y procesar la compra
+    - Usa GestorCarrito y GestorHistorial definidos en Autenticacion.js
+*/
 document.addEventListener("DOMContentLoaded", () => {
-    // Verifica que el usuario esté conectado (si no, lo envía a login)
+        // Verifica que el usuario esté conectado (si no, lo envía a login)
     if (!GestorSesion.estaLogueado()) {
         alert("⚠️ Debes iniciar sesión para ver tu carrito.\n\nSerás redirigido a la página de login.");
         window.location.href = "Inicio.html";
@@ -28,7 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
         // Recorre cada producto y lo muestra
         carrito.forEach((producto) => {
             // Extrae el precio y lo convierte a número
-            const precioNumerico = parseFloat(producto.precio.replace("$", ""));
+            // Aseguramos que exista la propiedad precio y que sea parseable
+            const precioNumerico = parseFloat(String(producto.precio).replace("$", "")) || 0;
             total += precioNumerico;
             // Crea una tarjeta visual para el producto
             const itemDiv = document.createElement("div");
@@ -56,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 alert("✓ Producto eliminado del carrito");
                 renderizarCarrito(); // Redibujar el carrito sin este producto
             });
-
             carritoItems.appendChild(itemDiv);
         });
         // Actualiza el total a mostrar

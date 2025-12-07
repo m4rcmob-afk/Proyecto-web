@@ -1,5 +1,10 @@
+/*
+    Inicio.js
+    - Maneja el formulario de inicio de sesión (login).
+    - Valida formato de correo y credenciales contra GestorUsuarios.
+*/
 document.addEventListener("DOMContentLoaded", () => {
-    const formulario = document.querySelector(".Formulario");
+        const formulario = document.querySelector(".Formulario");
     const correoInput = document.querySelector("input[name='Correo']");
     const contraseñaInput = document.querySelector("input[name='Contraseña']");
     const confirmarInput = document.querySelector("input[name='Confirmación']");

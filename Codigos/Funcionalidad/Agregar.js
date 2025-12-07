@@ -1,3 +1,8 @@
+/*
+    Agregar.js
+    - Lógica para el formulario de subir productos.
+    - Valida campos, convierte imagen a base64 y delega en GestorProductos.guardar
+*/
 document.addEventListener("DOMContentLoaded", () => {
     // Verifica que el usuario esté conectado (si no, lo envía a login)
     if (!GestorSesion.estaLogueado()) {
