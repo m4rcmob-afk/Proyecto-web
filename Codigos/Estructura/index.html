@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>DeltaStore-Tienda</title>
+    <link rel="stylesheet" href="..Proyecto web/Codigos/Estilos/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="logo">
+            <img src="../../Imagenes/LogoTienda.png" alt="Logo Delta Store">
+        </div>
+        <h1 class="titulo">Página de Inicio</h1>
+        <div class="acciones">
+            <a href="Codigos/Estructura/Inicio.html" class="boton-login">Iniciar sesión</a>
+            <button class="boton-menu" id="abrirMenu">☰</button>
+        </div>
+    </header>
+    <aside class="menu-lateral" id="menuLateral">
+        <nav>
+            <ul>
+                <li><a href="index.html">Página principal</a></li>
+                <li><a href="#consolas">Consolas</a></li>
+                <li><a href="#equipos">Equipos gamer</a></li>
+                <li><a href="#accesorios">Accesorios</a></li>
+                <li><a href="#juegos">Juegos</a></li>
+                <li><a href="#noticias">Noticias</a></li>
+                <li><a href="../Proyecto web/Codigos/Estructura/Agregar.html">Agregar productos</a></li>
+                <li><a href="../Proyecto web/Codigos/Estructura/Carrito.html">Carrito</a></li>
+                <li><a href="../Proyecto web/Codigos/Estructura/Historial.html">Historial de compras</a></li>
+                <li><a href="../Proyecto web/Codigos/Estructura/Contacto.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <div class="buscador">
+            <input type="text" placeholder="Buscar productos..." id="barraBusqueda" aria-label="Buscar productos">
+            <button id="btnBuscar" aria-label="Buscar">Buscar</button>
+        </div>
+        <div class="secciones">
+            <section id="consolas" class="productos">
+                <h2>Consolas</h2>
+                <div class="producto">
+                    <img src="https://i.blogs.es/15cd4e/captura_de_pantalla_2024-09-10_a_las_17.08.51/840_560.jpeg" alt="PlayStation 5">
+                    <h3>PlayStation 5</h3>
+                    <p>$499</p>
+                    <p class="descripcion">Consola de última generación con procesador AMD Ryzen, gráficos RDNA 2, SSD ultrarrápido de 825 GB, soporte para juegos en 4K hasta 120 FPS y retrocompatibilidad con títulos de PS4. Incluye mando DualSense con retroalimentación háptica.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://i.blogs.es/73ba2e/xbox2/1366_2000.jpg" alt="Xbox Series X">
+                    <h3>Xbox Series X</h3>
+                    <p>$499</p>
+                    <p class="descripcion">Potente consola con CPU Zen 2 y GPU RDNA 2, almacenamiento SSD de 1 TB, soporte para juegos en 4K nativo, ray tracing y hasta 120 FPS. Compatible con miles de juegos de Xbox One y Xbox 360.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSntUHIJiHo4COIH7qC7y3NtSApR8Ldldi-Nw&s" alt="Nintendo Switch OLED">
+                    <h3>Nintendo Switch OLED</h3>
+                    <p>$349</p>
+                    <p class="descripcion">Pantalla OLED de 7”, modo portátil y dock para TV, mejor audio, almacenamiento ampliable y extensa biblioteca de exclusivos.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://www.trustedreviews.com/wp-content/uploads/sites/7/2020/10/Xbox-Series-S-34-scaled-e1603883732720-820x461.jpg" alt="Xbox Series S">
+                    <h3>Xbox Series S</h3>
+                    <p>$299</p>
+                    <p class="descripcion">Consola compacta, SSD de 512 GB, juegos hasta 1440p con reescalado a 4K, ideal para Game Pass y retrocompatibilidad.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlz1tod3CjPyPfzn0Nnb6LSQPAti8yclfqaw&s" alt="PlayStation 4 Pro">
+                    <h3>PlayStation 4 Pro</h3>
+                    <p>$399</p>
+                    <p class="descripcion">PS4 optimizada para 4K y HDR, enorme catálogo, rendimiento sólido para juegos y multimedia.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDFXm_6qwsIJsIpcW2DJojVkP2F1ZRd8WmTg&s" alt="Nintendo Switch Lite">
+                    <h3>Nintendo Switch Lite</h3>
+                    <p>$199</p>
+                    <p class="descripcion">Versión totalmente portátil, ligera y cómoda, compatible con la mayoría de juegos en modo portátil.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://sm.pcmag.com/pcmag_au/how-to/r/remote-pla/remote-play-how-to-stream-games-from-your-pc-to-the-steam-de_amue.jpg" alt="Steam Deck">
+                    <h3>Steam Deck</h3>
+                    <p>$399</p>
+                    <p class="descripcion">Consola portátil de Valve para juegos de PC, controles integrados, pantalla táctil y soporte para bibliotecas de Steam.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqRhPnRScl1B2-8Uw3NwMyl83TwNoCTuB0rw&s" alt="PlayStation VR2">
+                    <h3>PlayStation VR2</h3>
+                    <p>$549</p>
+                    <p class="descripcion">VR de nueva generación de Sony con pantallas OLED, seguimiento ocular y experiencia inmersiva optimizada para PS5.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+            </section>
+            <section id="equipos" class="productos">
+                <h2>Equipos Gamer</h2>
+                <div class="producto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEzKh7rKB7oqbqgOqKXTIYwFrzAmmcOPsm-LQBxxr27w&s" alt="PC Gamer Alpha">
+                    <h3>PC Gamer Alpha</h3>
+                    <p>$1200</p>
+                    <p class="descripcion">Intel Core i7 12ª Gen, NVIDIA RTX 4070, 16 GB DDR5, SSD NVMe 1 TB. Gaming competitivo y streaming en alta calidad.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMGmivFSc2MkfvsvP2t9y5SZsP9q114-1N3ludAac2&s" alt="Laptop Gamer Nitro">
+                    <h3>Laptop Gamer Nitro</h3>
+                    <p>$999</p>
+                    <p class="descripcion">Pantalla 15.6” 144 Hz, AMD Ryzen 7, RTX 3060, 16 GB RAM, SSD 512 GB. Rendimiento portátil para jugar en cualquier lugar.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgSl8i09JRL0kVYLnRDmBmXh7lEBvpRTnsDA&s" alt="PC Gamer Titan">
+                    <h3>PC Gamer Titan</h3>
+                    <p>$1500</p>
+                    <p class="descripcion">Intel Core i9, RTX 4080, 32 GB DDR5, SSD 2 TB. Rendimiento extremo para 4K y VR.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQxYH_QMcmS1GYnlAMVCrSrZ3cPpQ50yKT2A&s" alt="Laptop Gamer Predator">
+                    <h3>Laptop Gamer Predator</h3>
+                    <p>$1299</p>
+                    <p class="descripcion">Pantalla 17” 165 Hz, Ryzen 9, RTX 3070, 32 GB RAM. Potencia portátil para AAA y creación.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxHmQFFvL4YdH7UbSBbT9P3uwNIFBsyxvlXQ&s" alt="Mini PC Gamer Cube">
+                    <h3>Mini PC Gamer Cube</h3>
+                    <p>$899</p>
+                    <p class="descripcion">Ryzen 5, GTX 1660, 16 GB RAM, SSD 512 GB. Formato compacto con gran rendimiento.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLm4kBaDjdu3uISnpwt6AaAV1vxA875N8sQw&s" alt="Workstation Gamer Pro">
+                    <h3>Workstation Gamer Pro</h3>
+                    <p>$2200</p>
+                    <p class="descripcion">Intel Xeon, RTX 4090, 64 GB RAM, SSD 4 TB. Creación de contenido y gaming de élite.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAaP-Xghe4YASeeoGiP7HhYJ7LVKvGDvtwrA&s" alt="Laptop Gamer Legion">
+                    <h3>Laptop Gamer Legion</h3>
+                    <p>$1099</p>
+                    <p class="descripcion">15” 144 Hz, Intel i7, RTX 3060, 16 GB RAM. Gran relación rendimiento-precio.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwJ4s28VTSfbesQql_t1JUhldZYHswtnm5uw&s" alt="PC Gamer Starter">
+                    <h3>PC Gamer Starter</h3>
+                    <p>$699</p>
+                    <p class="descripcion">Ryzen 3, GTX 1650, 8 GB RAM, SSD 256 GB. Ideal para iniciarse en el gaming.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+            </section>
+            <section id="accesorios" class="productos">
+                <h2>Accesorios</h2>
+                <div class="producto">
+                    <img src="https://url-shortener.me/1HWY" alt="Teclado Mecánico RGB">
+                    <h3>Teclado Mecánico RGB</h3>
+                    <p>$80</p>
+                    <p class="descripcion">Switches rojos, retroiluminación RGB personalizable, chasis de aluminio, anti-ghosting completo.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://url-shortener.me/1HX5" alt="Mouse Gamer">
+                    <h3>Mouse Gamer</h3>
+                    <p>$40</p>
+                    <p class="descripcion">Sensor 16,000 DPI, 6 botones programables, RGB y memoria interna para perfiles.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://url-shortener.me/1HX9" alt="Auriculares Gamer Surround">
+                    <h3>Auriculares Gamer Surround</h3>
+                    <p>$60</p>
+                    <p class="descripcion">Sonido 7.1, micrófono con cancelación de ruido, RGB y almohadillas de espuma.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://url-shortener.me/1HXF" alt="Silla Gamer Ergonómica">
+                    <h3>Silla Gamer Ergonómica</h3>
+                    <p>$150</p>
+                    <p class="descripcion">Reposabrazos ajustables, soporte lumbar, inclinación y acabado en cuero sintético.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://url-shortener.me/1HXH" alt="Monitor Gamer 27">
+                    <h3>Monitor Gamer 27”</h3>
+                    <p>$299</p>
+                    <p class="descripcion">Panel IPS 144 Hz, resolución 2K, compatible con FreeSync y G-Sync.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://url-shortener.me/1HXN" alt="Control Inalámbrico Pro">
+                    <h3>Control Inalámbrico Pro</h3>
+                    <p>$70</p>
+                    <p class="descripcion">Compatible con PC/consolas, batería recargable, vibración dual, diseño ergonómico.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQemAmsopQxDT8laj6A3S6z48DPy5V7JfQEmA&s" alt="Micrófono Gamer USB">
+                    <h3>Micrófono Gamer USB</h3>
+                    <p>$90</p>
+                    <p class="descripcion">Micrófono condensador con soporte antishock y filtro, ideal para streaming.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://url-shortener.me/1HXZ" alt="Webcam Full HD">
+                    <h3>Webcam Full HD</h3>
+                    <p>$50</p>
+                    <p class="descripcion">1080p, micrófono integrado, excelente para videollamadas y directos.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+            </section>
+            <section id="juegos" class="productos">
+                <h2>Juegos</h2>
+                <div class="producto">
+                    <img src="https://url-shortener.me/1HYF" alt="Cyberpunk 2077">
+                    <h3>Cyberpunk 2077</h3>
+                    <p>$59</p>
+                    <p class="descripcion">RPG de mundo abierto en Night City, personalización profunda, narrativa de alto nivel y soporte para ray tracing.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://url-shortener.me/1HZ7 " alt="Elden Ring">
+                    <h3>Elden Ring</h3>
+                    <p>$69</p>
+                    <p class="descripcion">Acción y aventura de FromSoftware, mundo abierto, combates desafiantes y jefes memorables.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://url-shortener.me/1HZP" alt="God of War Ragnarok">
+                    <h3>God of War Ragnarok</h3>
+                    <p>$69</p>
+                    <p class="descripcion">Secuela épica, combate pulido, historia emocional y gráficos impresionantes.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://url-shortener.me/1I04" alt="Halo Infinite">
+                    <h3>Halo Infinite</h3>
+                    <p>$59</p>
+                    <p class="descripcion">Shooter futurista con campaña y multijugador, optimizado para Xbox Series X/S.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://url-shortener.me/1I0A" alt="The Legend of Zelda: TOTK">
+                    <h3>The Legend of Zelda: TOTK</h3>
+                    <p>$69</p>
+                    <p class="descripcion">Aventura de mundo abierto con nuevas mecánicas y exploración creativa.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://url-shortener.me/1I0I" alt="Horizon Forbidden West">
+                    <h3>Horizon Forbidden West</h3>
+                    <p>$69</p>
+                    <p class="descripcion">Acción en un mundo postapocalíptico con criaturas mecánicas y narrativa envolvente.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://url-shortener.me/1I0O" alt="Forza Horizon 5">
+                    <h3>Forza Horizon 5</h3>
+                    <p>$59</p>
+                    <p class="descripcion">Conducción arcade de mundo abierto, paisajes espectaculares y gran variedad de vehículos.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="https://url-shortener.me/1I0R" alt="Resident Evil 4 Remake">
+                    <h3>Resident Evil 4 Remake</h3>
+                    <p>$59</p>
+                    <p class="descripcion">Survival horror clásico reinventado, atmósfera intensa y combate moderno.</p>
+                    <button>Agregar al carrito</button>
+                </div>
+            </section>
+            <section id="noticias" class="productos">
+                <h2>Noticias</h2>
+                <div class="producto">
+                    <img src="https://url-shortener.me/1I0V" alt="Nueva GPU RTX 5090">
+                    <h3>Nueva GPU RTX 5090</h3>
+                    <p>Última novedad gamer</p>
+                    <p class="descripcion">NVIDIA presenta arquitectura de nueva generación con ray tracing avanzado y DLSS 4.0, rendimiento superior para 8K.</p>
+                    <button>Leer más</button>
+                </div>
+                <div class="producto">
+                    <img src="https://url-shortener.me/1I0Y" alt="Lanzamiento GTA VI">
+                    <h3>Lanzamiento GTA VI</h3>
+                    <p>Disponible en 2025</p>
+                    <p class="descripcion">Mapa más grande, gráficos hiperrealistas y multijugador expandido. Lanzamiento previsto en consolas y PC.</p>
+                    <button>Leer más</button>
+                </div>
+                <div class="producto">
+                    <img src="https://url-shortener.me/1I13" alt="PS5 Pro Rumores">
+                    <h3>PS5 Pro en el horizonte</h3>
+                    <p>Rumores</p>
+                    <p class="descripcion">Filtraciones apuntan a mejoras de rendimiento y soporte gráfico avanzado para títulos de próxima generación.</p>
+                    <button>Leer más</button>
+                </div>
+                <div class="producto">
+                    <img src="https://url-shortener.me/1I15" alt="Xbox Game Pass Expansión">
+                    <h3>Xbox Game Pass se expande</h3>
+                    <p>Servicios</p>
+                    <p class="descripcion">Nuevos juegos día 1 y mejoras en la nube para jugar desde cualquier dispositivo sin instalar.</p>
+                    <button>Leer más</button>
+                </div>
+                <div class="producto">
+                    <img src="https://url-shortener.me/1I18" alt="Steam Ofertas">
+                    <h3>Ofertas de temporada en Steam</h3>
+                    <p>Descuentos</p>
+                    <p class="descripcion">Grandes descuentos en títulos AAA y indies. Momento perfecto para ampliar tu biblioteca.</p>
+                    <button>Leer más</button>
+                </div>
+                <div class="producto">
+                    <img src="https://url-shortener.me/1I1B" alt="E3 Regresa">
+                    <h3>El E3 regresa con fuerza</h3>
+                    <p>Eventos</p>
+                    <p class="descripcion">Las principales compañías anuncian conferencias con novedades en hardware y videojuegos.</p>
+                    <button>Leer más</button>
+                </div>
+                <div class="producto">
+                    <img src="https://url-shortener.me/1I1E" alt="NVIDIA Drivers">
+                    <h3>NVIDIA lanza nuevos drivers</h3>
+                    <p>Actualizaciones</p>
+                    <p class="descripcion">Drivers optimizados para los últimos lanzamientos, mejoras de rendimiento y correcciones de bugs.</p>
+                    <button>Leer más</button>
+                </div>
+                <div class="producto">
+                    <img src="https://url-shortener.me/1I1H" alt="Sony Compra Estudio">
+                    <h3>Sony compra estudio indie</h3>
+                    <p>Industria</p>
+                    <p class="descripcion">Expansión del portafolio de juegos exclusivos con nuevas IPs y talento creativo.</p>
+                    <button>Leer más</button>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 DeltaStore - Tu tienda gamer</p>
+    </footer>
+    <script src="../Funcionalidad/Autenticacion.js"></script>
+    <script src="../Funcionalidad/index.js"></script>
+</body>
+</html>
