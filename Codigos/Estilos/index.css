@@ -235,6 +235,7 @@ body {
     padding: 22px;
     border-radius: 12px;
     margin-bottom: 22px;
+    scroll-margin-top: 120px;
 }
 #consolas h2 {
     color: #fffbe6;
@@ -246,6 +247,7 @@ body {
     padding: 22px;
     border-radius: 12px;
     margin-bottom: 22px;
+    scroll-margin-top: 120px;
 }
 #equipos h2 {
     color: #f6ecff;
@@ -257,6 +259,7 @@ body {
     padding: 22px;
     border-radius: 12px;
     margin-bottom: 22px;
+    scroll-margin-top: 120px;
 }
 #accesorios h2 {
     color: #fff8ef;
@@ -268,6 +271,7 @@ body {
     padding: 22px;
     border-radius: 12px;
     margin-bottom: 22px;
+    scroll-margin-top: 120px;
 }
 #juegos h2 {
     color: #fff0f6;
@@ -279,6 +283,7 @@ body {
     padding: 22px;
     border-radius: 12px;
     margin-bottom: 22px;
+    scroll-margin-top: 120px;
 }
 #noticias h2 {
     color: #effff3;
